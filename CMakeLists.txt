@@ -37,6 +37,7 @@ option(OPT_BUILD_SPECTRAN_SOURCE "Build Spectran Source Module (Dependencies: Aa
 option(OPT_BUILD_SPECTRAN_HTTP_SOURCE "Build Spectran HTTP Source Module (no dependencies required)" ON)
 option(OPT_BUILD_SPYSERVER_SOURCE "Build SpyServer Source Module (no dependencies required)" ON)
 option(OPT_BUILD_USRP_SOURCE "Build USRP Source Module (libuhd)" OFF)
+option(OPT_BUILD_SMETER "Build S Meter module" ON)
 
 # Sinks
 option(OPT_BUILD_ANDROID_AUDIO_SINK "Build Android Audio Sink Module (Dependencies: AAudio, only for android)" OFF)
@@ -341,6 +342,10 @@ endif (OPT_BUILD_SCANNER)
 if (OPT_BUILD_SCHEDULER)
 add_subdirectory("misc_modules/scheduler")
 endif (OPT_BUILD_SCHEDULER)
+
+if (OPT_BUILD_SMETER)
+    add_subdirectory("misc_modules/smeter")
+endif (OPT_BUILD_SMETER)
 
 if (MSVC)
     add_executable(sdrpp "src/main.cpp" "win32/resources.rc")
