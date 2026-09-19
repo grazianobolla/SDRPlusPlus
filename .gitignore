@@ -1,4 +1,5 @@
 build/
+out/
 .vscode/
 .vs/
 .idea/
@@ -21,8 +22,9 @@ source_modules/badgesdr_source
 decoder_modules/mystery_decoder
 decoder_modules/tetra_decoder
 misc_modules/modulation_monitor
-out/
+misc_modules/smeter
+
 vcpkg_installed/
 vcpkg-manifest-install.log
 vcpkg.json
-misc_modules/smeter
+vcpkg-configuration.json
